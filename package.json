@@ -1,0 +1,21 @@
+{
+  "name": "mood-meter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filippofinke/mood-meter.git"
+  },
+  "author": "Filippo Finke",
+  "bugs": {
+    "url": "https://github.com/filippofinke/mood-meter/issues"
+  },
+  "homepage": "https://github.com/filippofinke/mood-meter#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1"
+  }
+}
