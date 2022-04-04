@@ -4,6 +4,14 @@
 
 ### 🏠 [Homepage](https://github.com/filippofinke/mood-meter#readme)
 
+<details>
+ <summary>Demo</summary>
+ 
+ <p align="center">
+   <img src="https://user-images.githubusercontent.com/37296364/161615396-3b5b1912-6f46-44cb-9520-973544bf49ab.gif" alt="Demo">
+ </p>
+</details>
+
 ## IFTTT Support
 
 You can set up an IFTTT webhook in the config file to receive notifications about the other person's mood change directly to your phone.
