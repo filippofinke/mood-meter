@@ -4,6 +4,10 @@
 
 ### 🏠 [Homepage](https://github.com/filippofinke/mood-meter#readme)
 
+## IFTTT Support
+
+You can set up an IFTTT webhook in the config file to receive notifications about the other person's mood change directly to your phone.
+
 ## Install
 
 ```sh
@@ -14,6 +18,38 @@ npm install
 
 ```sh
 npm run start
+```
+
+## Configuration
+
+```js
+{
+  // Server port
+  "PORT": 8080,
+  // Webhook for notification, get it from: https://ifttt.com/maker_webhooks/settings
+  "WEBHOOK": "https://example.com",
+  "CONFIG": {
+    // The title of the web page
+    "title": "Title",
+    // Colors, play with it
+    "colors": {
+      "--bg-color": "#fdf6f0",
+      "--text-color": "#a19882",
+      "--slider-thumb-color": "#cdbba7",
+      "--slider-bg-color": "linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(227, 255, 0, 1) 50%, rgba(0, 255, 0, 1) 100%);"
+    },
+    // Emojis to show on the bar
+    "emojis": ["🤬", "🥺", "😔", "😊", "🥰"],
+    // Animations to execute when an emoji is selected, the order matters.
+    "animations": [
+      ["😡", "👿", "😈", "👺", "💢", "🤬"],
+      ["😭", "😢", "😩"],
+      ["😟", "☹️", "😞"],
+      ["😊", "😄", "😃"],
+      ["😍", "❤️", "😘", "💋"]
+    ]
+  }
+}
 ```
 
 ## Author
