@@ -8,6 +8,10 @@
     "WEBHOOK": {
       "description": "Get your webhook for notifications from: https://ifttt.com/maker_webhooks/settings",
       "value": ""
+    },
+    "TITLE": {
+      "description": "Set the title for your site",
+      "value": ""
     }
   }
 }

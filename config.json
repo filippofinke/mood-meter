@@ -1,7 +1,6 @@
 {
   "PORT": 8080,
   "CONFIG": {
-    "title": "Title",
     "colors": {
       "--bg-color": "#fdf6f0",
       "--text-color": "#a19882",

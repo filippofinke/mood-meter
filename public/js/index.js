@@ -1,6 +1,5 @@
 let config = null;
 let loader = document.getElementById("loader");
-let title = document.getElementById("title");
 let slider = document.getElementById("slider");
 let emojisContainer = document.getElementById("emojis");
 
@@ -34,8 +33,6 @@ window.addEventListener("load", async () => {
   }
 
   let mood = await fetch("/mood").then((r) => r.json());
-
-  title.innerText = config.title;
 
   for (let emoji of config.emojis) {
     let span = document.createElement("span");

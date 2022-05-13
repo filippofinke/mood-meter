@@ -9,11 +9,11 @@ let config;
 if (fs.existsSync("./config.json")) {
   config = require("./config.json");
 } else {
-  console.log(`Please rename the config.sample.json file to config.json`);
+  console.log(`Please ensure the config.json file exists in the root directory.`);
   process.exit(0);
 }
 
-if(!fs.existsSync(".env")) {
+if (!fs.existsSync(".env")) {
   console.log(`Please rename the .env.sample file to .env`);
   process.exit(0);
 }
@@ -26,8 +26,12 @@ try {
 const app = express();
 
 app.use(morgan("common"));
+app.use(express.static("public"));
+app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => {
+  res.render("index",{title:process.env.TITLE});
+});
 
 app.get("/mood", (req, res) => {
   return res.json(mood);
