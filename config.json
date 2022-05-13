@@ -1,6 +1,5 @@
 {
   "PORT": 8080,
-  "WEBHOOK": "IFTTT_WEBHOOK_FOR_NOTIFICATIONS",
   "CONFIG": {
     "title": "Title",
     "colors": {
