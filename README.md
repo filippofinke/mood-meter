@@ -63,7 +63,7 @@ Make sure to rename the sample .env file to .env and change the webhook link.
 Get your webhook for notifications from: https://ifttt.com/maker_webhooks/settings
 
 ## Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anjannair/mood-meter)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/filippofinke/mood-meter)
 
 ## Author
 
