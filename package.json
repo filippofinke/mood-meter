@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/filippofinke/mood-meter#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.7"

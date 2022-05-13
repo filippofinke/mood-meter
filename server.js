@@ -3,12 +3,18 @@ const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
 const morgan = require("morgan");
+require("dotenv").config();
 
 let config;
 if (fs.existsSync("./config.json")) {
   config = require("./config.json");
 } else {
   console.log(`Please rename the config.sample.json file to config.json`);
+  process.exit(0);
+}
+
+if(!fs.existsSync(".env")) {
+  console.log(`Please rename the .env.sample file to .env`);
   process.exit(0);
 }
 
@@ -33,7 +39,7 @@ app.post("/mood/:value", (req, res) => {
   mood = req.params.value;
   fs.writeFileSync(path.join(__dirname, "mood.json"), mood);
 
-  fetch(config.WEBHOOK).then(() => {
+  fetch(process.env.WEBHOOK).then(() => {
     console.log("Notification sent!");
   });
 

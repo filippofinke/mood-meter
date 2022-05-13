@@ -34,8 +34,6 @@ npm run start
 {
   // Server port
   "PORT": 8080,
-  // Webhook for notification, get it from: https://ifttt.com/maker_webhooks/settings
-  "WEBHOOK": "https://example.com",
   "CONFIG": {
     // The title of the web page
     "title": "Title",
@@ -59,6 +57,13 @@ npm run start
   }
 }
 ```
+
+### **.env file**
+Make sure to rename the sample .env file to .env and change the webhook link.
+Get your webhook for notifications from: https://ifttt.com/maker_webhooks/settings
+
+## Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/filippofinke/mood-meter&env[WEBHOOK]=https://www.example.org)
 
 ## Author
 

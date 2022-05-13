@@ -1,0 +1,7 @@
+{
+  "name": "Mood Meter",
+  "description": "Track a person's mood and get a notification when it changes, inspired by the Kira Meter",
+  "repository": "https://github.com/filippofinke/mood-meter",
+  "logo": "https://raw.githubusercontent.com/filippofinke/mood-meter/main/public/img/icon.png",
+  "keywords": ["node"]
+}
