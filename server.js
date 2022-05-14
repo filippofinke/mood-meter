@@ -3,12 +3,18 @@ const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
 const morgan = require("morgan");
+require("dotenv").config();
 
 let config;
 if (fs.existsSync("./config.json")) {
   config = require("./config.json");
 } else {
-  console.log(`Please rename the config.sample.json file to config.json`);
+  console.log(`Please ensure the config.json file exists in the root directory.`);
+  process.exit(0);
+}
+
+if (!fs.existsSync(".env")) {
+  console.log(`Please rename the .env.sample file to .env`);
   process.exit(0);
 }
 
@@ -20,8 +26,12 @@ try {
 const app = express();
 
 app.use(morgan("common"));
+app.use(express.static("public"));
+app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => {
+  res.render("index",{title:process.env.TITLE,bgColor:process.env.bgColor,textColor:process.env.textColor,sliderThumbColor:process.env.sliderThumbColor,sliderBgColor:process.env.sliderBgColor});
+});
 
 app.get("/mood", (req, res) => {
   return res.json(mood);
@@ -33,7 +43,7 @@ app.post("/mood/:value", (req, res) => {
   mood = req.params.value;
   fs.writeFileSync(path.join(__dirname, "mood.json"), mood);
 
-  fetch(config.WEBHOOK).then(() => {
+  fetch(process.env.WEBHOOK).then(() => {
     console.log("Notification sent!");
   });
 
