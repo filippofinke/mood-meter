@@ -12,6 +12,23 @@
     "TITLE": {
       "description": "Set the title for your site",
       "value": ""
+    },
+    "bgColor": {
+      "description": "Set the background color for your site (leave as is for default)",
+      "value": "#fdf6f0"
+    },
+    "textColor": {
+      "description": "Set the text color for your site (leave as is for default)",
+      "value": "#c5c8c6"
+    },
+    "sliderThumbColor": {
+      "description": "Set the color for the slider thumb (leave as is for default)",
+      "value": "#cdbba7"
+    },
+    "sliderBgColor": {
+      "description": "Set the color for the slider background (leave as is for default)",
+      "value": "linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(227, 255, 0, 1) 50%, rgba(0, 255, 0, 1) 100%);"
     }
+
   }
 }

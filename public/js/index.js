@@ -25,13 +25,6 @@ slider.addEventListener("change", ({ target: { value } }) => {
 window.addEventListener("load", async () => {
   config = await fetch("/config").then((r) => r.json());
 
-  if (config.colors) {
-    let root = document.documentElement;
-    for (const [variable, value] of Object.entries(config.colors)) {
-      root.style.setProperty(variable, value);
-    }
-  }
-
   let mood = await fetch("/mood").then((r) => r.json());
 
   for (let emoji of config.emojis) {

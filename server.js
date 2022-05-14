@@ -30,7 +30,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index",{title:process.env.TITLE});
+  res.render("index",{title:process.env.TITLE,bgColor:process.env.bgColor,textColor:process.env.textColor,sliderThumbColor:process.env.sliderThumbColor,sliderBgColor:process.env.sliderBgColor});
 });
 
 app.get("/mood", (req, res) => {
